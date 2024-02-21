@@ -1,0 +1,50 @@
+/* Base styles */
+.navbar {
+  background: #333;
+  color: #fff;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar ul li {
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+}
