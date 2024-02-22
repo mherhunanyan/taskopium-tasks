@@ -1,10 +1,13 @@
-.comment {
-  margin-left: 20px;
-  border-left: 2px solid #ddd;
-  padding-left: 10px;
-  margin-top: 5px;
+.comments-list {
+  list-style-type: none;
+  padding-left: 20px;
 }
 
-.replies {
+.comment-item + .comment-item {
   margin-top: 10px;
+}
+
+.comment-content {
+  padding: 10px;
+  border-left: 2px solid #ddd;
 }

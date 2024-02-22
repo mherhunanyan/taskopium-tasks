@@ -28,18 +28,23 @@ const comments = [
 ];
 
 function generateComments(comments, container) {
+  const list = document.createElement("ul");
+  list.classList.add("comment-list");
+  container.appendChild(list);
+
   comments.forEach((comment) => {
-    const commentDiv = document.createElement("div");
-    commentDiv.classList.add("comment");
-    commentDiv.textContent = comment.text;
+    const listItem = document.createElement("li");
+    listItem.classList.add("comment-item");
 
-    container.appendChild(commentDiv);
+    const commentArticle = document.createElement("article");
+    commentArticle.classList.add("comment-conent");
+    commentArticle.textContent = comment.text;
+    listItem.appendChild(commentArticle);
 
-    if (comment.replies?.length) {
-      const repliesContainer = document.createElement("div");
-      repliesContainer.classList.add("replies");
-      commentDiv.appendChild(repliesContainer);
-      generateComments(comment.replies, repliesContainer);
+    list.appendChild(listItem);
+
+    if (comment.replies && comment.replies.length > 0) {
+      generateComments(comment.replies, listItem);
     }
   });
 }

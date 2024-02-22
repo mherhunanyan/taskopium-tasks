@@ -27,6 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function populateTable(employees) {
+  
+  if (!employees || employees.length === 0) {
+    console.error('No employee data available.');
+    return;
+  }
+
+
   const tableBody = document
     .getElementById("employeesTable")
     .getElementsByTagName("tbody")[0];
@@ -34,15 +41,15 @@ function populateTable(employees) {
   employees.forEach((employee) => {
     const row = document.createElement("tr");
 
-    row.appendChild(createCell(employee.id));
-    row.appendChild(createCell(employee.name));
-    row.appendChild(createCell(employee.age));
-    row.appendChild(createCell(employee.department));
-    row.appendChild(createCell(employee.role.title));
-    row.appendChild(createCell(employee.role.level));
-    row.appendChild(createCell(employee.contact.email));
-    row.appendChild(createCell(employee.contact.phone));
-    row.appendChild(createCell(employee.skills.join(", ")));
+    row.appendChild(createCell(employee.id ?? 'N/A'));
+    row.appendChild(createCell(employee.name ?? 'N/A'));
+    row.appendChild(createCell(employee.age ?? 'N/A'));
+    row.appendChild(createCell(employee.department ?? 'N/A'));
+    row.appendChild(createCell(employee.role?.title ?? 'N/A'));
+    row.appendChild(createCell(employee.role?.level ?? 'N/A'));
+    row.appendChild(createCell(employee.contact?.email ?? 'N/A'));
+    row.appendChild(createCell(employee.contact?.phone ?? 'N/A'));
+    row.appendChild(createCell((employee.skills?.join(', ')) ?? 'N/A'));
 
     tableBody.appendChild(row);
   });
