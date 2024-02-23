@@ -1,0 +1,12 @@
+.checkbox-container {
+  padding: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* If you need to remove bullet points (in case you have any list-style applied globally) */
+.checkbox-container {
+  list-style-type: none;
+}
