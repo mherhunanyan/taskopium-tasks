@@ -20,22 +20,29 @@ function populateFilters() {
     categoryFilter.appendChild(option);
   });
 
-  
-  const tags = [...new Set(products.flatMap(product => product.tags))];
   const tagFilters = document.getElementById("tagFilters");
-  tags.forEach(tag => {
+  const fieldset = document.createElement("fieldset");
+  const legend = document.createElement("legend");
+  legend.textContent = "Tags";
+  fieldset.appendChild(legend);
+
+  const tags = [...new Set(products.flatMap((product) => product.tags))];
+  tags.forEach((tag) => {
     const label = document.createElement("label");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.value = tag;
+    checkbox.id = `tag-${tag}`;
     label.appendChild(checkbox);
+    label.htmlFor = checkbox.id;
     label.appendChild(document.createTextNode(tag));
-    tagFilters.appendChild(label);
+    fieldset.appendChild(label);
   });
 
-  
+  tagFilters.appendChild(fieldset);
+
   categoryFilter.addEventListener("change", filterProducts);
-  Array.from(tagFilters.children).forEach(label => label.firstChild.addEventListener("change", filterProducts));
+  fieldset.querySelectorAll("input[type=checkbox]").forEach(checkbox => checkbox.addEventListener("change", filterProducts));
 }
 
 function displayProducts(filteredProducts) {

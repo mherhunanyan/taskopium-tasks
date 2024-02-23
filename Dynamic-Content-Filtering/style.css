@@ -1,12 +1,57 @@
-.checkbox-container {
-  padding: 5px;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-.checkbox-container input[type="checkbox"] {
-  margin-right: 5px;
+#filters {
+  margin-bottom: 20px;
 }
 
-/* If you need to remove bullet points (in case you have any list-style applied globally) */
-.checkbox-container {
-  list-style-type: none;
+select,
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+legend {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+#productContainer {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  label {
+    margin: 3px 0;
+  }
 }
