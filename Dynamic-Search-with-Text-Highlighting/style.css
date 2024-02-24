@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+#search-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#book-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#book-list li {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#book-list h2, #book-list p {
+  margin: 5px 0;
+}
+
+.highlight {
+  background-color: yellow;
+  border-radius: 2px;
+}
