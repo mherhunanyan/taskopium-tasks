@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+.field-container {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.field-container label {
+  margin-right: 10px;
+}
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#form-work-area {
+  margin-top: 20px;
+  border: 1px dashed #ccc;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+select, input[type=text], input[type=email], input[type=password] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}

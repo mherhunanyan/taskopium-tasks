@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Dynamic Form Builder</h2>
+    <div>
+      <select id="field-type">
+        <option value="text">Text</option>
+        <option value="email">Email</option>
+        <option value="password">Password</option>
+        <option value="dropdown">Dropdown</option>
+        <option value="checkbox">Checkbox</option>
+        <option value="radio">Radio Button</option>
+      </select>
+      <button id="add-field">Add Field</button>
+    </div>
+    <div id="form-work-area"></div>
+    <button id="export-form">Export Form</button>
+    <input type="file" id="import-form" style="display: none" />
+    <button onclick="document.getElementById('import-form').click()">
+      Import Form
+    </button>
+
+    <script src="formBuilder.js"></script>
+  </body>
+</html>
